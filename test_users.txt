@@ -1,0 +1,2 @@
+test@example.com,John,Doe,securePassword
+another@example.com,Jane,Doe,anotherPassword

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.m.wikipedia.org%2Fwiki%2F%25D0%25A4%25D0%25B0%25D0%25B9%25D0%25BB%3ATodoist_logo.png&psig=AOvVaw1WqwcD_OetHygi7yBrt5Rb&ust=1701289680161000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIjgqorE54IDFQAAAAAdAAAAABAE">
+    <link rel="stylesheet" href="/styles.css"
+          th:href="@{styles.css}" media="screen"/>
+    <title>Login Page</title>
+</head>
+<body>
+<div id="Login-Container">
+    <h2 id="login-signUp-heading">Login/SignUp</h2>
+    <form action='/login' method="post">
+        <input type='text' name='email' placeholder="Email"></input> <span class='errors' th:text="${emailError}"></span>
+        <input type="password" name="password" placeholder="Secret Key"></input><span class='errors' th:text="${passwordError}"></span>
+        <input type='submit' class="button login-buttons" id="login-button" value='Login'></input>
+    </form>
+
+    <a href="/register" class="button login-buttons" id="signUP-button">Don't
+        have account,SignUp</a>
+
+</div>
+</body>
+</html>
